@@ -1,0 +1,25 @@
+group 'org.homecloud.erp'
+version '1.0-SNAPSHOT'
+description = "Authentication-service for homecloud"
+
+apply plugin: 'war'
+apply plugin: 'maven'
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile "org.homecloud.erp:commons:1.0-SNAPSHOT"
+    compile 'io.jsonwebtoken:jjwt:0.6.0'
+}
